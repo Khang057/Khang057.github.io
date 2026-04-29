@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giang Lê Khang | AI & Data Science Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #0f172a; /* Midnight Blue */
+            --accent-color: #10b981;  /* Emerald Green */
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --bg-card: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+
+        .hero-title { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero-subtitle { color: var(--accent-color); font-size: 1.5rem; font-weight: 300; }
+
+        nav {
+            position: sticky; top: 0; background: rgba(15, 23, 42, 0.9);
+            padding: 20px 0; border-bottom: 1px solid #334155; text-align: center; z-index: 100;
+        }
+
+        nav a { color: var(--text-main); text-decoration: none; margin: 0 20px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: var(--accent-color); }
+
+        .container { max-width: 1000px; margin: auto; padding: 80px 20px; }
+        h2 { border-left: 4px solid var(--accent-color); padding-left: 15px; margin-bottom: 40px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .card {
+            background: var(--bg-card); padding: 30px; border-radius: 12px;
+            border: 1px solid #334155; transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent-color); }
+        .card h3 { margin-top: 0; color: var(--accent-color); }
+
+        .skills-tag {
+            display: inline-block; background: #334155; padding: 5px 12px;
+            border-radius: 20px; font-size: 0.85rem; margin: 5px; color: #cbd5e1;
+        }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid #334155; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="hero-title">Giang Lê Khang</h1>
+        <p class="hero-subtitle">Aspiring AI & Data Science Engineer</p>
+    </header>
+
+    <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+    </nav>
+
+    <div class="container" id="about">
+        <h2>Về bản thân</h2>
+        <p>Tôi là sinh viên chuyên ngành Công nghệ thông tin với đam mê mãnh liệt trong việc khám phá tri thức từ dữ liệu. Tôi tập trung vào việc xây dựng các mô hình Machine Learning tối ưu và thiết kế kiến trúc hệ thống hiện đại.</p>
+    </div>
+
+    <div class="container" id="skills" style="background: #111827;">
+        <h2>Kỹ năng công nghệ</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Lập trình & Dữ liệu</h3>
+                <span class="skills-tag">Python</span>
+                <span class="skills-tag">SQL</span>
+                <span class="skills-tag">PostgreSQL</span>
+                <span class="skills-tag">Pandas/NumPy</span>
+            </div>
+            <div class="card">
+                <h3>AI & Machine Learning</h3>
+                <span class="skills-tag">XGBoost</span>
+                <span class="skills-tag">Scikit-Learn</span>
+                <span class="skills-tag">FastAPI</span>
+                <span class="skills-tag">Prompt Engineering</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="projects">
+        <h2>Dự án tiêu biểu</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Network Intrusion Detection</h3>
+                <p>Ứng dụng XGBoost để phát hiện xâm nhập mạng với độ chính xác cao trên bộ dữ liệu NSL-KDD.</p>
+            </div>
+            <div class="card">
+                <h3>Customer Churn API</h3>
+                <p>Xây dựng hệ thống dự báo rủi ro khách hàng rời bỏ tích hợp qua RESTful API bằng FastAPI.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <h2>Liên hệ</h2>
+        <p>Email: gianglekhang@email.com</p>
+        <p>GitHub: github.com/gianglekhang</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Giang Lê Khang. Được xây dựng bằng HTML/CSS & Jekyll.</p>
+    </footer>
+
+</body>
+</html>
