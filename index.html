@@ -6,60 +6,54 @@
     <title>Giang Lê Khang | AI & Data Science Portfolio</title>
     <style>
         :root {
-            --primary-color: #0f172a; /* Midnight Blue */
-            --accent-color: #10b981;  /* Emerald Green */
+            --primary-color: #0f172a;
+            --accent-color: #10b981;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --bg-card: #1e293b;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--primary-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
+            color: var(--text-main); line-height: 1.6; margin: 0; padding: 0;
         }
-
         header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+            height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
             background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
         }
-
         .hero-title { font-size: 3.5rem; margin-bottom: 10px; }
         .hero-subtitle { color: var(--accent-color); font-size: 1.5rem; font-weight: 300; }
-
         nav {
             position: sticky; top: 0; background: rgba(15, 23, 42, 0.9);
             padding: 20px 0; border-bottom: 1px solid #334155; text-align: center; z-index: 100;
         }
-
-        nav a { color: var(--text-main); text-decoration: none; margin: 0 20px; font-weight: 500; transition: 0.3s; }
+        nav a { color: var(--text-main); text-decoration: none; margin: 0 15px; font-weight: 500; transition: 0.3s; }
         nav a:hover { color: var(--accent-color); }
-
         .container { max-width: 1000px; margin: auto; padding: 80px 20px; }
         h2 { border-left: 4px solid var(--accent-color); padding-left: 15px; margin-bottom: 40px; }
-
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        
         .card {
             background: var(--bg-card); padding: 30px; border-radius: 12px;
             border: 1px solid #334155; transition: transform 0.3s;
         }
         .card:hover { transform: translateY(-10px); border-color: var(--accent-color); }
         .card h3 { margin-top: 0; color: var(--accent-color); }
-
         .skills-tag {
             display: inline-block; background: #334155; padding: 5px 12px;
             border-radius: 20px; font-size: 0.85rem; margin: 5px; color: #cbd5e1;
         }
-
+        /* CSS cho Form liên hệ */
+        input, textarea {
+            width: 100%; box-sizing: border-box; padding: 12px; margin-top: 8px; margin-bottom: 15px;
+            border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: white;
+        }
+        button {
+            width: 100%; padding: 12px; border-radius: 6px; border: none; 
+            background: var(--accent-color); color: white; font-size: 1rem; font-weight: bold; cursor: pointer; transition: 0.3s;
+        }
+        button:hover { background: #059669; }
+        .link-btn { color: var(--accent-color); text-decoration: none; margin-right: 15px; font-weight: bold;}
         footer { text-align: center; padding: 40px; border-top: 1px solid #334155; color: var(--text-muted); }
     </style>
 </head>
@@ -74,6 +68,7 @@
         <a href="#about">Giới thiệu</a>
         <a href="#skills">Kỹ năng</a>
         <a href="#projects">Dự án</a>
+        <a href="#certifications">Chứng chỉ</a>
         <a href="#contact">Liên hệ</a>
     </nav>
 
@@ -87,17 +82,11 @@
         <div class="grid">
             <div class="card">
                 <h3>Lập trình & Dữ liệu</h3>
-                <span class="skills-tag">Python</span>
-                <span class="skills-tag">SQL</span>
-                <span class="skills-tag">PostgreSQL</span>
-                <span class="skills-tag">Pandas/NumPy</span>
+                <span class="skills-tag">Python</span><span class="skills-tag">SQL</span><span class="skills-tag">PostgreSQL</span><span class="skills-tag">Pandas/NumPy</span>
             </div>
             <div class="card">
                 <h3>AI & Machine Learning</h3>
-                <span class="skills-tag">XGBoost</span>
-                <span class="skills-tag">Scikit-Learn</span>
-                <span class="skills-tag">FastAPI</span>
-                <span class="skills-tag">Prompt Engineering</span>
+                <span class="skills-tag">XGBoost</span><span class="skills-tag">Scikit-Learn</span><span class="skills-tag">FastAPI</span><span class="skills-tag">Prompt Engineering</span>
             </div>
         </div>
     </div>
@@ -107,21 +96,66 @@
         <div class="grid">
             <div class="card">
                 <h3>Network Intrusion Detection</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Hoàn thành: Tháng 4/2026</p>
                 <p>Ứng dụng XGBoost để phát hiện xâm nhập mạng với độ chính xác cao trên bộ dữ liệu NSL-KDD.</p>
+                <p><strong>Công nghệ:</strong> Python, XGBoost, Scikit-Learn</p>
+                <div style="margin-top: 20px;">
+                    <a href="https://github.com/Khang057" target="_blank" class="link-btn">🔗 GitHub</a>
+                    <a href="#" class="link-btn">🌐 Live Demo</a>
+                </div>
             </div>
             <div class="card">
                 <h3>Customer Churn API</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Hoàn thành: Tháng 3/2026</p>
                 <p>Xây dựng hệ thống dự báo rủi ro khách hàng rời bỏ tích hợp qua RESTful API bằng FastAPI.</p>
+                <p><strong>Công nghệ:</strong> Python, FastAPI, PostgreSQL</p>
+                <div style="margin-top: 20px;">
+                    <a href="https://github.com/Khang057" target="_blank" class="link-btn">🔗 GitHub</a>
+                    <a href="#" class="link-btn">🌐 Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="certifications" style="background: #111827;">
+        <h2>Chứng chỉ chuyên môn</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Python: Machine Learning</h3>
+                <p>Udemy | Cấp: 04/2026</p>
+                <a href="#" class="link-btn">✅ Verify Certificate</a>
+            </div>
+            <div class="card">
+                <h3>Looker Studio: Data Analysis</h3>
+                <p>Udemy | Cấp: 04/2026</p>
+                <a href="#" class="link-btn">✅ Verify Certificate</a>
+            </div>
+            <div class="card">
+                <h3>GenAI for Customer Success</h3>
+                <p>Udemy | Cấp: 04/2026</p>
+                <a href="#" class="link-btn">✅ Verify Certificate</a>
             </div>
         </div>
     </div>
 
     <div class="container" id="contact">
         <h2>Liên hệ</h2>
-        <p>Email: <a href="mailto:4901104065@student.hcmue.edu.vn" style="color: var(--accent-color); text-decoration: none;">email-cua-ban@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/Khang057" target="_blank" style="color: var(--accent-color); text-decoration: none;">github.com/Khang057</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/giang-le-khang-ai" target="_blank" style="color: var(--accent-color); text-decoration: none;">linkedin.com/in/giang-le-khang-ai</a></p>
-    </div>>
+        <div class="grid">
+            <div>
+                <p>Email: <a href="mailto:email-cua-ban@gmail.com" class="link-btn">email-cua-ban@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/Khang057" target="_blank" class="link-btn">github.com/Khang057</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/giang-le-khang-ai" target="_blank" class="link-btn">linkedin.com/in/giang-le-khang-ai</a></p>
+            </div>
+            <div>
+                <form action="mailto:email-cua-ban@gmail.com" method="post" enctype="text/plain">
+                    <input type="text" placeholder="Tên của bạn" required>
+                    <input type="email" placeholder="Email của bạn" required>
+                    <textarea placeholder="Tin nhắn" rows="4" required></textarea>
+                    <button type="submit">Gửi tin nhắn</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2026 Giang Lê Khang. Được xây dựng bằng HTML/CSS & Jekyll.</p>
